@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Product Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .card {
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 1px solid #007bff;
+            /* Change the color to match your theme */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Angad's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">My Projects </a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link active" aria-current="page" href="Achivements.html">Achivements</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li> -->
+                </ul>
+                <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="product-header d-flex justify-content-between my-3">
+            <!-- <h2 class="text-center my-3">Products</h2> -->
+
+
+            <ul id="filter-items" class="list-unstyled d-flex flex-wrap gap-2">
+                <li>
+                    <a href="#" class="btn btn-outline-primary" data=".showall" value="all">All Projects</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-outline-secondary" data=".tableau" value="tableau">Tableau</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-outline-success" data=".powerbi" value="powerbi">PowerBI</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-outline-danger" data=".sql" value="sql">SQL</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-outline-info" data=".ml" value="ml">Machine Learning</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-outline-primary" data=".rp" value="ml">R</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-outline-success" data=".js" value="ml">JavaScript</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-outline-dark" data=".iot" value="ml">IOT</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn-outline-warning" data=".mis" value="mis">Miscellaneous</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="container my-4">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+
+                <div class="col content showall js hover-effect">
+                    <div class="card h-100">
+                        <img src="javascript Project.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Javascript Projects</h5>
+                            <p class="card-text">In this repository, I target for 100+ Javascript mini Projects.
+                                In this repository, you'll find:
+                                Snippets of code that showcase JavaScript's versatility.
+                                Mini-projects that illustrate real-world applications.</p>
+                            <a href="https://github.com/angadsingh9784/angad-javascript-projects"
+                                class="btn btn-primary" target="_blank">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall tableau">
+                    <div class="card h-100">
+                        <img src="TableauProject1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableau Project {Churn Analysis}</h5>
+                            <p class="card-text">The distribution of monthly charges includes a clear affect on customer
+                                churn, with a significant churn rate observed around the $200 monthly charge point.
+                                This suggests that clients may discover the value at this price point to be insufficient
+                            </p>
+                            <a href="https://github.com/angadsingh9784/Tableau-Project1-ChurnAnalysis"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall tableau">
+                    <div class="card h-100">
+                        <img src="TableauProject2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableau Project {Car Sales}</h5>
+                            <p class="card-text"> I've explored the car sales dataset using Tableau. In this project, I
+                                utilized Text Tables, Highlight Tables, and Heat Maps to bring the data to life. Each
+                                visualization is accompanied by comprehensive descriptive, diagnostic, and prescriptive
+                                analyses that delve into the data's narrative and offer actionable insights.</p>
+                            <a href="https://github.com/angadsingh9784/Tableau-Project2-CarSales"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall tableau">
+                    <div class="card h-100">
+                        <img src="Tableau Agriculture.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableau Project {Agriculture Dataset}</h5>
+                            <p class="card-text"> I completed my new project of Tableau using three visual elements
+                                (Filled Map, Dual Line Chart, Scatter PLot). See my presentation below in which
+                                I used Agriculture dataset of India and also explaining the trends and analysis of a
+                                particular visualization. ThankYou !.</p>
+                            <a href="https://github.com/angadsingh9784/Tableau-Project2-Agriculture"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall ml">
+                    <div class="card h-100">
+                        <img src="k means clustering ml.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning Project{Behavioral Segmentation}</h5>
+                            <p class="card-text">I find a real-world application of the K-Means Clustering which is a
+                                Behavioral Segmentation of customers in which I explain everything in my attached
+                                presentation that how k-means clustering works , dataset chosen and so-on. I invite you
+                                to check out the project details and share your thoughts! Your feedback and insights are
+                                always appreciated.
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/MachineLearniong-Project2-KmeansClustering"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall ml">
+                    <div class="card h-100">
+                        <img src="knn ml.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning Project {Breast Cancer Prediction}</h5>
+                            <p class="card-text">I am sharing my new project of Machine learning. In which I find a
+                                real-world application/use of KNN and Illustrate the the idea of the algorithm by using
+                                the example. The real world application is Breast Cancer Prediction Using K-Nearest
+                                Neighbors (KNN) , go through my project as I explained KNN in my first few slides and
+                                then the application.
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/MachineLearning-Project1-KNN"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall rp">
+                    <div class="card h-100">
+                        <img src="R project1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">R Project { Canadian Tyres Sales}</h5>
+                            <p class="card-text">Today, I am sharing my project, which includes different
+                                visualizations—both static and interactive. For the static visualizations, I used the R
+                                language along with the RStudio platform, and for the interactive ones, I used various
+                                online websites. Please go through my attached presentation below. Any feedback or
+                                suggestions are appreciated.
+                            </p>
+                            <a href="https://github.com/angadsingh9784/R-Project2-CanadianTyreSales?tab=readme-ov-file"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall sql">
+                    <div class="card h-100">
+                        <img src="sql project1 .png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">SQL Project {Pizza Sales}</h5>
+                            <p class="card-text">Completed a SQL Project for Data Analysis on Pizza Sales in which I
+                                using the dataset of pizza shop, to solve several questions related to pizza sales, I
+                                attached my presentation below, in which I added screenshots of code along with their
+                                output, Would love to hear your thoughts or experiences with similar projects !! Thanks
+                                to WsCube TechAyushi Jain
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/SQL-Project1-PizzaSales"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall rp">
+                    <div class="card h-100">
+                        <img src="R Project Cricket.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">R Project{Cricket Dataset}</h5>
+                            <p class="card-text">
+                                Just completed a project analyzing the Cricket Dataset using R , In which I tried to
+                                find the MIN, MAX , MEAN, MODE, PERCENTILES, MEDIAN, COVARIANCE , CORELATION for those
+                                columns which contain numeric values. I added screenshots of code, along with the
+                                output, in the presentation. Would love to hear your thoughts or experiences with
+                                similar projects!
+
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/R-Project1-CricketDataset"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col content showall powerbi">
+                    <div class="card h-100">
+                        <img src="PowerBi Project 1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Power BI Project {Call Center}</h5>
+                            <p class="card-text">
+                                Created a dashboard in Power BI for Claire that reflects all relevant Key Performance
+                                Indicators (KPIs) and metrics in the dataset. Get creative! Possible KPIs include (to
+                                get you started, but not limited to): 📌 Overall customer satisfaction 📌Overall calls
+                                answered/abandoned 📌Calls by time 📌Average speed of answer 📌Agent’s performance
+                                quadrant -> average handle time (talk duration) vs calls answered
+
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/PowerBI-Project2-CallCenter"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall powerbi">
+                    <div class="card h-100">
+                        <img src="PowerBI Project2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Power Bi Project {Ecommerce Sales} </h5>
+                            <p class="card-text">
+                                Excited to share my first Power BI project! 🚀 I had a fantastic time diving into data
+                                visualization and analysis, and I'm thrilled with the results. Looking forward to
+                                sharing more insights soon! hashtag#PowerBI hashtag#DataVisualization hashtag#Analytics"
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/PowerBI-Project1-EcommerceSales"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall js">
+                    <div class="card h-100">
+                        <img src="React app food.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">React Project {Swiggy Web App Clone}.
+                            </h5>
+                            <p class="card-text">
+                                Following are the features which I add in the project with the particular concept i
+                                used:
+
+                                I used the Realtime Swiggy Api for high-performant application and to avoid CORS Error.
+                                Lazy Loading for App Optimization (When you click on the particular product(food) for
+                                more description then by this it cannot load the whole content insantly).
+                                Simmer UI Integration for better UI exprience (Library => react-shimmer-effects).
+                            
+                            </p>
+                            <a href="https://github.com/angadsingh9784/foody-ReactApp"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall iot">
+                    <div class="card h-100">
+                        <img src="IOT Project.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">IOT Project {Home Automation}</h5>
+                            <p class="card-text">
+                                Hello, I want to share with you all , My first IOT project which HOME AUTOMATION, in this you can operate any appliances of your home from mobile from any corner of world using internet and I also add a gas sensor which will detects any LPG gas leakage at your home and immediately gives alarm on your mobile.
+
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/HomeAutomationIOT"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <script src="index.js"></script>
+
+</body>
+
+</html>
