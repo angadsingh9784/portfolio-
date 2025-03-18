@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Angad's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="lo.jpg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            margin: 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000; /* Ensure it's above other content */
+            margin: 20px; /* Add margin on all sides */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+        }
+         body {
+            padding-top: 80px;
+            padding-left:20px;
+            padding-right:20px; /* Adjust based on the navbar height */
+        }
+
+        .card {
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 1px solid #007bff;
+            /* Change the color to match your theme */
+        }
+
+        
+        /* Change text color to red on hover */
+        .navbar-nav .nav-link:hover {
+            color: red !important; /* Use !important to override other styles */
+        }
+
+
+
+
+        .navbar-brand {
+            font-size: 1 rem; /* Increase font size */
+            font-weight: bold; /* Make it bold */
+            color: #4CAF50; /* Choose a nice color, such as green */
+            letter-spacing: 2px; /* Add some spacing between letters */
+            text-transform: uppercase; /* Make it uppercase */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+            transition: all 0.3s ease; /* Add a smooth transition for hover effect */
+        }
+
+        /* Hover effect for logo */
+        .navbar-brand:hover {
+            color: #ff5722; /* Change color on hover */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* More intense shadow on hover */
+        }
+
+    
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border p-3">
+    
+
+
+<div class="container-fluid">
+        <a class="navbar-brand" href="#">Angad's Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        
+
+
+
+
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center w-100">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">My Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Achivements.html">Achievements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-danger" aria-current="page" href="ResumeA.pdf">My Resume</a>
+                </li>     
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="about.html">About Me</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container ">
+        <div class="product-header d-flex flex-column align-items-center my-3">
+    <ul id="filter-items" class="list-unstyled d-flex flex-wrap gap-2  justify-content-center p-3">
+        <li>
+            <a href="#" class="btn btn-outline-primary" data=".showall" value="all">All Projects</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-secondary" data=".tableau" value="tableau">Tableau</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-success" data=".powerbi" value="powerbi">PowerBI</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-danger" data=".sql" value="sql">SQL</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-info" data=".ml" value="ml">Machine Learning</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-primary" data=".rp" value="r">R</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-success" data=".js" value="javascript">JavaScript</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-dark" data=".iot" value="iot">IOT</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-warning" data=".excel" value="excel">Excel</a>
+        </li>
+    </ul>
+</div>
+
+
+        <div class="container my-4">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+                    <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="a4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Dashboard - GestureToText</h5>
+                            <p class="card-text">
+                                 A Gesture-to-Text Performance Dashboard! This dashboard provides key insights into user satisfaction, gesture recognition accuracy, complaint rates, and browser usage, helping refine and optimize the gesture recognition system....
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/Excel_HealthcareDashboard_Patient360?tab=readme-ov-file"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+               
+
+
+
+
+
+                <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="a3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Dashboard - Patient 360</h5>
+                            <p class="card-text">
+                                The Patient 360 Analytics Dashboard provides a comprehensive overview of patient data, including medical conditions, billing amounts, blood type distributions, and gender-based insights....
+
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/Excel_HealthcareDashboard_Patient360?tab=readme-ov-file"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="a2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Dashboard - AS Medical</h5>
+                            <p class="card-text">
+                                This Tuberculosis (TB) Analytics Dashboard provides a comprehensive visualization of TB prevalence, mortality, and detection trends globally.....
+                            </p>
+                            <a href="https://github.com/angadsingh9784/HealthcareDashboard_AsMedical"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="Screenshot 2025-02-17 171258.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Dashboard - BlinkIT Sales</h5>
+                            <p class="card-text">
+                                This dashboard provides an in-depth visualization of sales and operational data for Blinkit, a last-minute grocery delivery app in India....
+                            </p>
+                            <a href="https://github.com/angadsingh9784/ExcelDashboard_BlinkIT"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="a1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Dashboard - Logistics Performance</h5>
+                            <p class="card-text">
+                                This Logistics Performance Dashboard provides key insights into supply chain operations, helping businesses optimize inventory, reduce defects, and enhance revenue tracking....
+                            </p>
+                            <a href="https://github.com/angadsingh9784/Excel_SupplychainDashboard_AngadPVT"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="Screenshot 2025-02-17 170251.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Dashboard - Bank Loan</h5>
+                            <p class="card-text">
+                                Developed two interactive dashboards in Excel that are interconnected through dynamic buttons and provide insightful visualizations with real-time interactivity.
+                                 These dashboards were designed to be user-friendly, intuitive, and visually appealing, with a focus on making data exploration seamless....
+                            </p>
+                            <a href="https://github.com/angadsingh9784/BanjkLoan_ExcelProject"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="Screenshot 2025-02-17 180315.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Dashboard - Pizza Sales</h5>
+                            <p class="card-text">
+                                🚀 Pizza Sales Analysis Dashboard Created this dashboard using Excel and SQL to analyze sales trends and performance:
+                                 Total Revenue: $65,160 Busiest Times: Friday/Saturday evenings Top Sellers: Classic Deluxe & Chicken pizzas Key Insight:
+                                  Large pizzas drive the most sales!....
+                            </p>
+                            <a href="https://github.com/angadsingh9784/ExcelDashboard_PizzaSales"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="Screenshot 2025-02-17 175133.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Dashboard - Coffee Sales</h5>
+                            <p class="card-text">
+                                The main objective of this project is to analyze retail sales data for a coffee shop to derive actionable insights
+                                 that can enhance operational efficiency and improve overall performance. This dashboard was created using Excel,
+                                  leveraging its visualization and data manipulation tools to provide answers to key business questions....
+                            </p>
+                            <a href="https://github.com/angadsingh9784/ExcelProject_CoffeeSales"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="Screenshot 2025-02-17 174303.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Excel Dashboard - Bicycle Sales</h5>
+                            <p class="card-text">
+                                The Bicycle Shop Sales Dashboard provides a comprehensive overview of the business performance, offering valuable insights into key metrics and trends. Built using Excel, this dynamic dashboard includes the following features:
+                            </p>
+                            <a href="https://github.com/angadsingh9784/Bycycle_ExcelDashboard_Project"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <div class="col content showall powerbi">
+                    <div class="card h-100">
+                        <img src="Screenshot 2025-02-17 134926.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Power BI Project - Call Center</h5>
+                            <p class="card-text">
+                                Created a dashboard in Power BI for Claire that reflects all relevant Key Performance
+                                Indicators (KPIs) and metrics in the dataset. Get creative! Possible KPIs include (to
+                                get you started, but not limited to): 📌 Overall customer satisfaction 📌Overall calls
+                                answered/abandoned 📌Calls by time 📌Average speed of answer 📌Agent’s performance
+                                quadrant -> average handle time (talk duration) vs calls answered
+
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/PowerBI-Project2-CallCenter"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="col content showall tableau">
+                    <div class="card h-100">
+                        <img src="Screenshot 2025-02-17 134149.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableau Dashboard - Covid-19 India</h5>
+                            <p class="card-text">
+                                This Tableau dashboard provides a detailed analysis of Covid-19 trends in India, offering valuable insights into key metrics:
+
+d Trends Over Time: A steady rise in confirmed cases is visible post-July 2020, with recovery rates aligning closely with the confirmed trends, showcasing the effectiveness of interventions......
+
+                            </p>
+                            <a href="https://public.tableau.com/app/profile/angad.singh4504/viz/Covid19_TableauProject1_AngadSingh/Dashboard1?publish=yes"
+                                class="btn btn-outline-success">Tableau Link</a>
+                                <a href="https://github.com/angadsingh9784/TableauDashboard_covid19"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall tableau">
+                    <div class="card h-100">
+                        <img src="Screenshot 2025-02-17 133333.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableau Dashboard - Emergency Healthcare</h5>
+                            <p class="card-text">
+                                This project analyzes the relationship between wait time and patient satisfaction in emergency care using data visualization techniques in Tableau. The goal is to understand whether reducing wait times directly improves patient experience or if other factors play a larger role.
+                            </p>
+                            <a href="https://public.tableau.com/app/profile/angad.singh4504/viz/HealthcareDashboard_17382666433030/Dashboard?classId=f7b37e2c-be88-4e3c-82a6-9990e8684202&assignmentId=e6a649f6-6253-4c73-ad79-a1c2d4c32086&submissionId=9f94ad90-2631-3b60-c7fc-4d6d935b6a48"
+                                class="btn btn-outline-success">Tableau Link</a>
+                                <a href="https://github.com/angadsingh9784/TableauDashboard_EmergencyHealthCare?tab=readme-ov-file"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col content showall tableau">
+                    <div class="card h-100">
+                        <img src="TableauProject1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableau Project {Churn Analysis}</h5>
+                            <p class="card-text">The distribution of monthly charges includes a clear affect on customer
+                                churn, with a significant churn rate observed around the $200 monthly charge point.
+                                This suggests that clients may discover the value at this price point to be insufficient
+                            </p>
+                            <a href="https://github.com/angadsingh9784/Tableau-Project1-ChurnAnalysis"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col content showall js hover-effect">
+                    <div class="card h-100">
+                        <img src="javascript Project.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Javascript Projects</h5>
+                            <p class="card-text">In this repository, I target for 100+ Javascript mini Projects.
+                                In this repository, you'll find:
+                                Snippets of code that showcase JavaScript's versatility.
+                                Mini-projects that illustrate real-world applications.</p>
+                            <a href="https://github.com/angadsingh9784/angad-javascript-projects"
+                                class="btn btn-primary" target="_blank">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col content showall tableau">
+                    <div class="card h-100">
+                        <img src="TableauProject1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableau Project {Churn Analysis}</h5>
+                            <p class="card-text">The distribution of monthly charges includes a clear affect on customer
+                                churn, with a significant churn rate observed around the $200 monthly charge point.
+                                This suggests that clients may discover the value at this price point to be insufficient
+                            </p>
+                            <a href="https://github.com/angadsingh9784/Tableau-Project1-ChurnAnalysis"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col content showall tableau">
+                    <div class="card h-100">
+                        <img src="TableauProject2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableau Project {Car Sales}</h5>
+                            <p class="card-text"> I've explored the car sales dataset using Tableau. In this project, I
+                                utilized Text Tables, Highlight Tables, and Heat Maps to bring the data to life. Each
+                                visualization is accompanied by comprehensive descriptive, diagnostic, and prescriptive
+                                analyses that delve into the data's narrative and offer actionable insights.</p>
+                            <a href="https://github.com/angadsingh9784/Tableau-Project2-CarSales"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall tableau">
+                    <div class="card h-100">
+                        <img src="Tableau Agriculture.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableau Project {Agriculture Dataset}</h5>
+                            <p class="card-text"> I completed my new project of Tableau using three visual elements
+                                (Filled Map, Dual Line Chart, Scatter PLot). See my presentation below in which
+                                I used Agriculture dataset of India and also explaining the trends and analysis of a
+                                particular visualization. ThankYou !.</p>
+                            <a href="https://github.com/angadsingh9784/Tableau-Project2-Agriculture"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall ml">
+                    <div class="card h-100">
+                        <img src="k means clustering ml.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning Project{Behavioral Segmentation}</h5>
+                            <p class="card-text">I find a real-world application of the K-Means Clustering which is a
+                                Behavioral Segmentation of customers in which I explain everything in my attached
+                                presentation that how k-means clustering works , dataset chosen and so-on. I invite you
+                                to check out the project details and share your thoughts! Your feedback and insights are
+                                always appreciated.
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/MachineLearniong-Project2-KmeansClustering"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall ml">
+                    <div class="card h-100">
+                        <img src="knn ml.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning Project {Breast Cancer Prediction}</h5>
+                            <p class="card-text">I am sharing my new project of Machine learning. In which I find a
+                                real-world application/use of KNN and Illustrate the the idea of the algorithm by using
+                                the example. The real world application is Breast Cancer Prediction Using K-Nearest
+                                Neighbors (KNN) , go through my project as I explained KNN in my first few slides and
+                                then the application.
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/MachineLearning-Project1-KNN"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall ml">
+                    <div class="card h-100">
+                        <img src="a5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Emergency Communicator {Using CNN}</h5>
+                            <p class="card-text">
+                                “SIGN SPEAK”: Connecting the deaf and hard of hearing with the world through the Gesture Recognition. The main purpose of our work is to employ the superior deep learning approaches for enhancing a highly effective and precise sign language interpreting model that will translate sign language to text and speech....
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/GestureToSpeech/tree/main"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="col content showall rp">
+                    <div class="card h-100">
+                        <img src="R project1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">R Project { Canadian Tyres Sales}</h5>
+                            <p class="card-text">Today, I am sharing my project, which includes different
+                                visualizations—both static and interactive. For the static visualizations, I used the R
+                                language along with the RStudio platform, and for the interactive ones, I used various
+                                online websites. Please go through my attached presentation below. Any feedback or
+                                suggestions are appreciated.
+                            </p>
+                            <a href="https://github.com/angadsingh9784/R-Project2-CanadianTyreSales?tab=readme-ov-file"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content showall sql">
+                    <div class="card h-100">
+                        <img src="sql project1 .png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">SQL Project {Pizza Sales}</h5>
+                            <p class="card-text">Completed a SQL Project for Data Analysis on Pizza Sales in which I
+                                using the dataset of pizza shop, to solve several questions related to pizza sales, I
+                                attached my presentation below, in which I added screenshots of code along with their
+                                output, Would love to hear your thoughts or experiences with similar projects !! Thanks
+                                to WsCube TechAyushi Jain
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/SQL-Project1-PizzaSales"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall rp">
+                    <div class="card h-100">
+                        <img src="R Project Cricket.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">R Project{Cricket Dataset}</h5>
+                            <p class="card-text">
+                                Just completed a project analyzing the Cricket Dataset using R , In which I tried to
+                                find the MIN, MAX , MEAN, MODE, PERCENTILES, MEDIAN, COVARIANCE , CORELATION for those
+                                columns which contain numeric values. I added screenshots of code, along with the
+                                output, in the presentation. Would love to hear your thoughts or experiences with
+                                similar projects!
+
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/R-Project1-CricketDataset"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <div class="col content showall powerbi">
+                    <div class="card h-100">
+                        <img src="PowerBi Project 1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Power BI Project {Call Center}</h5>
+                            <p class="card-text">
+                                Created a dashboard in Power BI for Claire that reflects all relevant Key Performance
+                                Indicators (KPIs) and metrics in the dataset. Get creative! Possible KPIs include (to
+                                get you started, but not limited to): 📌 Overall customer satisfaction 📌Overall calls
+                                answered/abandoned 📌Calls by time 📌Average speed of answer 📌Agent’s performance
+                                quadrant -> average handle time (talk duration) vs calls answered
+
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/PowerBI-Project2-CallCenter"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col content showall powerbi">
+                    <div class="card h-100">
+                        <img src="PowerBI Project2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Power Bi Project {Ecommerce Sales} </h5>
+                            <p class="card-text">
+                                Excited to share my first Power BI project! 🚀 I had a fantastic time diving into data
+                                visualization and analysis, and I'm thrilled with the results. Looking forward to
+                                sharing more insights soon! hashtag#PowerBI hashtag#DataVisualization hashtag#Analytics"
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/PowerBI-Project1-EcommerceSales"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall js">
+                    <div class="card h-100">
+                        <img src="React app food.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">React Project {Swiggy Web App Clone}.
+                            </h5>
+                            <p class="card-text">
+                                Following are the features which I add in the project with the particular concept i
+                                used:
+
+                                I used the Realtime Swiggy Api for high-performant application and to avoid CORS Error.
+                                Lazy Loading for App Optimization (When you click on the particular product(food) for
+                                more description then by this it cannot load the whole content insantly).
+                                Simmer UI Integration for better UI exprience (Library => react-shimmer-effects).
+                            
+                            </p>
+                            <a href="https://github.com/angadsingh9784/foody-ReactApp"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall iot">
+                    <div class="card h-100">
+                        <img src="IOT Project.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">IOT Project {Home Automation}</h5>
+                            <p class="card-text">
+                                Hello, I want to share with you all , My first IOT project which HOME AUTOMATION, in this you can operate any appliances of your home from mobile from any corner of world using internet and I also add a gas sensor which will detects any LPG gas leakage at your home and immediately gives alarm on your mobile.
+
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/HomeAutomationIOT"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="a6.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Aislemate {Project Management}</h5>
+                            <p class="card-text">
+                                To develop a mobile application that helps shoppers easily navigate shopping malls, locate specific stores, and search for products within those stores, providing real-time aisle-level navigation....
+
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/Aislemate_DataAnalysisProject?tab=readme-ov-file"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col content showall excel">
+                    <div class="card h-100">
+                        <img src="a7.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Patient 360 {StoryTelling}</h5>
+                            <p class="card-text">
+                                The story telling of my Patient 360 dashboard...
+
+                            </p>
+                            <a href="https://github.com/angadsingh9784/Patient360_Storytelling/tree/main"
+                                class="btn btn-primary">Github Link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <script src="index.js"></script>
+
+</body>
+
+</html>
